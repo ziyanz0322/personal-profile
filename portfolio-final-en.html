@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyan Zheng - Data Analytics & ML Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+            border-color: rgba(251, 191, 36, 0.5);
+        }
+        .project-details {
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+        .project-details.active {
+            display: block;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.active {
+            transform: rotate(180deg);
+        }
+        .dashboard-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+    </style>
+</head>
+<body class="text-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-950/95 backdrop-blur-md z-50 border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">Ziyan</div>
+            <div class="hidden md:flex gap-6 text-sm">
+                <a href="#resume" class="text-slate-400 hover:text-amber-400 transition-colors">Resume</a>
+                <a href="#projects" class="text-slate-400 hover:text-amber-400 transition-colors">Projects</a>
+                <a href="#skills" class="text-slate-400 hover:text-amber-400 transition-colors">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Name at top -->
+            <div class="mb-12">
+                <h1 class="text-5xl md:text-6xl font-bold mb-2">Ziyan (Freya) Zheng</h1>
+                <p class="text-2xl text-amber-400 font-semibold">Data Analytics & Machine Learning Professional</p>
+            </div>
+
+            <!-- Main content with photo -->
+            <div class="grid md:grid-cols-6 gap-6 items-start">
+                <!-- Photo on left - small -->
+                <div class="md:col-span-1">
+                    <img src="profile-photo.jpg" alt="Ziyan Zheng" class="rounded-lg shadow-2xl shadow-amber-400/20 w-full object-cover">
+                </div>
+
+                <!-- Content on right -->
+                <div class="md:col-span-5">
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        Business Analytics graduate student and CFA Level III candidate with 6+ years of commercial banking experience. Expert at simplifying complex problems to develop practical, data-driven solutions using Python, SQL, and machine learning.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <span>📍</span>
+                            <span>San Diego, CA</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <span>📧</span>
+                            <a href="/cdn-cgi/l/email-protection#ff859685cecac8bf8a9c8c9bd19a9b8a" class="hover:text-amber-400 transition-colors"><span class="__cf_email__" data-cfemail="ccb6a5b6fdf9fb8cb9afbfa8e2a9a8b9">[email&#160;protected]</span></a>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <span>📱</span>
+                            <span>(302) 533-0604</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <span>💼</span>
+                            <a href="https://linkedin.com/in/ziyan-zheng0322" target="_blank" class="hover:text-amber-400 transition-colors">linkedin.com/in/ziyan-zheng0322</a>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-300">
+                            <span>💻</span>
+                            <a href="https://github.com/ziyanz0322" target="_blank" class="hover:text-amber-400 transition-colors">https://github.com/ziyanz0322</a>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 px-6 bg-slate-800/30 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Education -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-amber-400 mb-8">Education</h3>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-50">Master of Science in Business Analytics</h4>
+                                <p class="text-amber-400 font-semibold">UC San Diego, Rady School of Management</p>
+                            </div>
+                            <span class="text-slate-400 text-sm">Graduating 12/2026</span>
+                        </div>
+                        <div class="mt-3">
+                            <p class="text-sm text-slate-400 mb-2 font-semibold">Relevant Courses:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Machine Learning & Predictive Modeling</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Web Mining & Recommender Systems</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Advanced Data Analysis</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Fraud Analytics</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Generative AI for Business</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <div class="flex items-start justify-between mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold">Master of Financial Analysis</h4>
+                                <p class="text-amber-400">University of New South Wales</p>
+                            </div>
+                            <span class="text-slate-400 text-sm">07/2016 -- 06/2017</span>
+                        </div>
+                        <div class="mt-3">
+                            <p class="text-sm text-slate-400 mb-2 font-semibold">Relevant Courses:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Business Analysis & Valuation</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">International Financial Statement Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <div class="flex items-start justify-between mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold">Bachelor of Commerce</h4>
+                                <p class="text-amber-400">University of Sydney - Accounting & Quantitative Business Analysis</p>
+                            </div>
+                            <span class="text-slate-400 text-sm">07/2013 -- 06/2016</span>
+                        </div>
+                        <div class="mt-3">
+                            <p class="text-sm text-slate-400 mb-2 font-semibold">Relevant Courses:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Statistical Modeling for Business</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Digital Innovation in Business</span>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs">Predictive Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-amber-400 mb-8">Professional Experience</h3>
+                <div class="space-y-8">
+                    <div class="border-l-4 border-amber-400 pl-6 relative">
+                        <div class="absolute -left-4 top-0 w-4 h-4 rounded-full bg-amber-400"></div>
+                        <h4 class="text-2xl font-bold text-slate-50">Senior Credit Analyst</h4>
+                        <p class="text-amber-400 font-semibold">CNOOC Finance Ltd.</p>
+                        <p class="text-slate-400 text-sm mb-4">Beijing, China • 09/2021 – 06/2024</p>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Project Leadership: Spearheaded 10+ financing projects with comprehensive due diligence analysis, supporting $7B+ (50B+ CNY) in lending decisions using advanced financial ratios and risk metrics</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Financial Modeling: Developed sophisticated Excel-based assessment models (DCF, sensitivity analysis, payback calculations) that improved deal structure recommendations and reduced risk exposure</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Data Visualization: Created executive dashboards in Tableau to track KPIs and performance trends, delivering weekly reports to senior leadership for data-driven decision making</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Process Automation: Engineered Python-SQL integration for compliance reporting, reducing manual processing time by 80% while improving accuracy and regulatory adherence</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-4 border-amber-400 pl-6 relative">
+                        <div class="absolute -left-4 top-0 w-4 h-4 rounded-full bg-amber-400"></div>
+                        <h4 class="text-2xl font-bold text-slate-50">Commercial Banker</h4>
+                        <p class="text-amber-400 font-semibold">CNOOC Finance Ltd.</p>
+                        <p class="text-slate-400 text-sm mb-4">Beijing, China • 10/2017 – 08/2021</p>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Client Analytics: Conducted comprehensive eligibility analyses and product recommendations, improving customer retention through targeted financial solutions</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Predictive Modeling: Applied regression analysis to correlate industry cycles with liquidity patterns, optimizing fund utilization and reducing idle capital</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 font-bold mt-1">•</span>
+                                <span class="text-slate-300">Risk Management: Designed and implemented anti-money laundering monitoring system processing 100,000+ daily transactions with automated risk flagging capabilities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div id="skills">
+                <h3 class="text-3xl font-bold text-amber-400 mb-8">Skills & Competencies</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <h4 class="text-lg font-bold text-amber-400 mb-4">Programming & Data</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Python (sklearn, pandas, numpy)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">SQL & Polars</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Tableau & Power BI</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Advanced Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <h4 class="text-lg font-bold text-amber-400 mb-4">Analytics & ML</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Hypothesis Testing & Statistical Analysis</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">A/B Testing & Experimentation</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Time Series & Anomaly Detection</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">ML Models: RF, GB, SVM, Neural Networks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg bg-slate-900/50 border border-slate-700">
+                        <h4 class="text-lg font-bold text-amber-400 mb-4">Business & Finance</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Financial Modeling (DCF, Valuation)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Credit Analysis & Risk Assessment</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">Banking Operations</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                                <span class="text-slate-300 text-sm">CFA Level III Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-16">Featured Projects (Click to expand ↓)</h2>
+
+            <!-- Project 1: Wine Market -->
+            <div class="mb-8 p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/30 border border-slate-700 project-card" onclick="toggleProject(0)">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2">🍷 Wine Market Investment Analysis</h3>
+                        <p class="text-amber-400 font-semibold mb-4">Tableau Dashboard & Strategic Business Intelligence</p>
+                        <p class="text-slate-300 mb-4">4 interactive dashboards analyzing 130k+ wine reviews across 40+ countries. Identified two-tier sourcing strategy and underpriced premium regions for wine distributors.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Tableau</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python (Polars)</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Statistical Analysis</span>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                <div class="project-details mt-8 pt-8 border-t border-slate-700 space-y-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">📊 Tableau Dashboards</h4>
+                        <div class="mb-6">
+                            <p class="text-slate-300 mb-3"><strong>Dashboard 3 & 4: Investment Insights by Country & Variety</strong></p>
+                            <img src="tableau-dashboard-1.png" alt="Dashboard 3 and 4" class="dashboard-img mb-4">
+                            <p class="text-slate-300 text-sm">Displays GDP per capita analysis, regional rating vs production volume, investment score ranking across Tier 1 (Italy, France, Spain) and Tier 2 (US, Australia, China) countries.</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-300 mb-3"><strong>Dashboard 4 Deep Dive: Variety Analysis (Top 20)</strong></p>
+                            <img src="tableau-dashboard-2.png" alt="Dashboard 4 Variety Analysis" class="dashboard-img mb-4">
+                            <p class="text-slate-300 text-sm">Price distribution by variety, vintage timeline spanning 1918-2017, country distribution heatmap showing geographic concentration of premium varieties.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">💡 Key Insights</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ <strong>Tier 1</strong> (Italy, France, Spain): Premium stability focus with high quality (88-95 pts)</li>
+                            <li class="text-slate-300">✓ <strong>Tier 2</strong> (US, Australia, China): Scalable volume with competitive quality (85-90 pts)</li>
+                            <li class="text-slate-300">✓ <strong>Investment Score:</strong> 60% quality (ratings) + 40% liquidity (production volume)</li>
+                            <li class="text-slate-300">✓ <strong>Identified underpriced premium regions:</strong> Peru, China, India for margin optimization</li>
+                            <li class="text-slate-300">✓ <strong>Vintage strategy:</strong> Classic varieties (Champagne/Port) for high-margin collectibles; modern varieties for volume sales</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">🎯 Outcomes</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ Supported strategic sourcing decisions for wine distributors</li>
+                            <li class="text-slate-300">✓ Identified underpriced premium regions for margin optimization</li>
+                            <li class="text-slate-300">✓ Created repeatable investment analysis framework across 40+ countries</li>
+                            <li class="text-slate-300">✓ Enabled data-driven portfolio diversification strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Snowflake -->
+            <div class="mb-8 p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/30 border border-slate-700 project-card" onclick="toggleProject(1)">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2">⚡ Snowflake ETL Pipeline</h3>
+                        <p class="text-amber-400 font-semibold mb-4">Cloud Data Warehouse & Weather Impact Analysis</p>
+                        <p class="text-slate-300 mb-4">Built end-to-end ETL pipeline integrating multi-format datasets (XML, CSV, API). Reduced processing time by 60% and discovered weather-payment correlation patterns.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Snowflake</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">SQL</span>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                <div class="project-details mt-8 pt-8 border-t border-slate-700 space-y-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">🔄 ETL Pipeline Architecture (4 Stages)</h4>
+                        <ul class="space-y-3">
+                            <li class="text-slate-300"><strong>Stage 1 - Ingest:</strong> Multi-format data collection (XML, CSV, API endpoints)</li>
+                            <li class="text-slate-300"><strong>Stage 2 - Transform:</strong> Data cleaning & standardization using Python + SQL transformations</li>
+                            <li class="text-slate-300"><strong>Stage 3 - Load:</strong> Optimized warehouse loading using Snowflake PUT/COPY commands</li>
+                            <li class="text-slate-300"><strong>Stage 4 - Analyze:</strong> Weather-invoice correlation analysis to discover payment patterns</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">📈 Key Metrics</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ <strong>60% reduction</strong> in processing time vs manual approach</li>
+                            <li class="text-slate-300">✓ <strong>Millions of records</strong> processed efficiently with optimized SQL queries</li>
+                            <li class="text-slate-300">✓ <strong>Automated data ingestion</strong> reduces manual effort and errors</li>
+                            <li class="text-slate-300">✓ <strong>Discovered correlations</strong> between weather patterns and payment delays</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">💡 Technical Highlights</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ Multi-format data integration (XML, CSV, API to unified warehouse)</li>
+                            <li class="text-slate-300">✓ Optimized SQL queries for handling large datasets</li>
+                            <li class="text-slate-300">✓ Automated Snowflake PUT/COPY for reliable data loading</li>
+                            <li class="text-slate-300">✓ Scalable infrastructure for future analyses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Recommender -->
+            <div class="mb-8 p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/30 border border-slate-700 project-card" onclick="toggleProject(2)">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2">🤖 Wine Rating Recommender System</h3>
+                        <p class="text-amber-400 font-semibold mb-4">Hybrid Machine Learning Model (FPMC + Content-Based)</p>
+                        <p class="text-slate-300 mb-4">Developed hybrid recommendation engine combining collaborative filtering, sequential patterns, and content features. Achieved MAE of 0.3754 (3.37% improvement over baseline).</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Scikit-learn</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Matrix Factorization</span>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                <div class="project-details mt-8 pt-8 border-t border-slate-700 space-y-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">🎯 Hybrid Model Architecture</h4>
+                        <ul class="space-y-3">
+                            <li class="text-slate-300"><strong>Signal 1 (60%) - Collaborative Filtering:</strong> LFM with bias terms capturing user preferences</li>
+                            <li class="text-slate-300"><strong>Signal 2 (30%) - Sequential Patterns:</strong> Markov Chain modeling wine-to-wine transitions</li>
+                            <li class="text-slate-300"><strong>Signal 3 (10%) - Content Similarity:</strong> 77 wine features (Type, Country, Region, Body, Acidity, ABV, Grapes)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">📊 Model Performance Comparison</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">LFM Simple: MAE=0.3890 (baseline)</li>
+                            <li class="text-slate-300">LFM Improved: MAE=0.3820 (2.3% improvement)</li>
+                            <li class="text-slate-300">FPMC: MAE=0.3780 (2.8% improvement)</li>
+                            <li class="text-slate-300"><strong class="text-amber-400">⭐ FPMC + Similarity: MAE=0.3754 (3.37% improvement) - BEST MODEL</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">✨ Key Advantages</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ 3.37% improvement over baseline LFM</li>
+                            <li class="text-slate-300">✓ Hybrid approach balances accuracy with explainability</li>
+                            <li class="text-slate-300">✓ Content features solve cold-start problem for new wines</li>
+                            <li class="text-slate-300">✓ 77 wine attributes enable rich feature engineering</li>
+                            <li class="text-slate-300">✓ Interpretable recommendations ("Similar to wines you liked")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Grocery Location -->
+            <div class="mb-8 p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/30 border border-slate-700 project-card" onclick="toggleProject(3)">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2">📍 Grocery Store Location Prediction</h3>
+                        <p class="text-amber-400 font-semibold mb-4">Data-Driven Location Analysis with Business & Health Impact</p>
+                        <p class="text-slate-300 mb-4">Analyzed 8,000+ California census tracts balancing business viability and community health impact. Identified 20 optimal locations with dual-objective optimization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Random Forest</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Gradient Boosting</span>
+                        </div>
+                    </div>
+                    <svg class="chevron w-6 h-6 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                <div class="project-details mt-8 pt-8 border-t border-slate-700 space-y-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">📊 3-Stage Analysis Pipeline</h4>
+                        <ul class="space-y-3">
+                            <li class="text-slate-300"><strong>Stage 1 - Data Cleaning:</strong> Integrated 5 datasets from USDA, CDC PLACES, Census Bureau with standardized census tract IDs</li>
+                            <li class="text-slate-300"><strong>Stage 2 - Feature Engineering:</strong> Created 4 composite indices (EHI, MSR, CNS, AGI) capturing economic, market, and health dimensions</li>
+                            <li class="text-slate-300"><strong>Stage 3 - ML Modeling:</strong> Random Forest for business success (R²=0.67) + Gradient Boosting for health impact (R²=0.91)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">📈 4 Composite Indices</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300"><strong>EHI (Economic Health Index):</strong> (1-poverty)×0.4 + (1-uninsured)×0.3 + income_percentile×0.3</li>
+                            <li class="text-slate-300"><strong>MSR (Market Saturation Ratio):</strong> Population / (existing_stores × 5000) - identifies undersaturated markets</li>
+                            <li class="text-slate-300"><strong>CNS (Community Need Score):</strong> obesity×0.35 + diabetes×0.35 + poverty×0.2 + distance×0.1</li>
+                            <li class="text-slate-300"><strong>AGI (Access Gap Index):</strong> (low_access_population + no_vehicle_households) / population</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-amber-400 mb-4">🎯 Results & Impact</h4>
+                        <ul class="space-y-2">
+                            <li class="text-slate-300">✓ Identified 20 optimal grocery store locations in California</li>
+                            <li class="text-slate-300">✓ <strong>Dual-objective balanced approach:</strong> 50% business profitability + 50% community health impact</li>
+                            <li class="text-slate-300">✓ <strong>Top 5 locations</strong> all located in food deserts: Fresno County (4), Kern County (3), Tulare County (3)</li>
+                            <li class="text-slate-300">✓ Framework replicable for other retail/service location optimization</li>
+                            <li class="text-slate-300">✓ Model shows no overfitting (train-test gap < 0.05)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-slate-800 text-center text-slate-500">
+        <p>© 2025 Ziyan Zheng. Crafted with precision for data-driven professionals.</p>
+    </footer>
+
+    <script>
+        function toggleProject(index) {
+            const projects = document.querySelectorAll('.project-card');
+            const project = projects[index];
+            if (!project) return;
+
+            const details = project.querySelector('.project-details');
+            const chevron = project.querySelector('.chevron');
+
+            // Close other projects
+            projects.forEach((p, i) => {
+                if (i !== index) {
+                    const otherDetails = p.querySelector('.project-details');
+                    const otherChevron = p.querySelector('.chevron');
+                    if (otherDetails) otherDetails.classList.remove('active');
+                    if (otherChevron) otherChevron.classList.remove('active');
+                }
+            });
+
+            // Toggle current project
+            if (details) details.classList.toggle('active');
+            if (chevron) chevron.classList.toggle('active');
+        }
+    </script>

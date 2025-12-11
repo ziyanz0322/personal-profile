@@ -459,50 +459,92 @@
                 </div>
             </div>
 
-            <!-- Project 4: Grocery Location -->
+<!-- Project 4: Grocery Location Prediction -->
             <div class="mb-8 p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/30 border border-slate-700 project-card" onclick="toggleProject(3)">
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="text-3xl font-bold mb-2">📍 Grocery Store Location Prediction</h3>
                         <p class="text-amber-400 font-semibold mb-4">Data-Driven Location Analysis with Business & Health Impact</p>
-                        <p class="text-slate-300 mb-4">Analyzed 8,000+ California census tracts balancing business viability and community health impact. Identified 20 optimal locations with dual-objective optimization.</p>
+                        <p class="text-slate-300 mb-4">Analyzed 8,000+ California census tracts using dual-objective optimization. Identified 20 optimal locations balancing business viability and community health impact.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python</span>
-                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Random Forest</span>
-                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Gradient Boosting</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Python (Polars)</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Machine Learning</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Feature Engineering</span>
+                            <span class="px-3 py-1 bg-slate-700/50 text-slate-300 rounded-full text-xs">Optimization</span>
                         </div>
                     </div>
-                    <svg class="chevron w-6 h-6 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
+                    <span class="chevron text-2xl">▼</span>
                 </div>
-                <div class="project-details mt-8 pt-8 border-t border-slate-700 space-y-6">
-                    <div>
-                        <h4 class="text-xl font-bold text-amber-400 mb-4">📊 3-Stage Analysis Pipeline</h4>
-                        <ul class="space-y-3">
-                            <li class="text-slate-300"><strong>Stage 1 - Data Cleaning:</strong> Integrated 5 datasets from USDA, CDC PLACES, Census Bureau with standardized census tract IDs</li>
-                            <li class="text-slate-300"><strong>Stage 2 - Feature Engineering:</strong> Created 4 composite indices (EHI, MSR, CNS, AGI) capturing economic, market, and health dimensions</li>
-                            <li class="text-slate-300"><strong>Stage 3 - ML Modeling:</strong> Random Forest for business success (R²=0.67) + Gradient Boosting for health impact (R²=0.91)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-amber-400 mb-4">📈 4 Composite Indices</h4>
-                        <ul class="space-y-2">
-                            <li class="text-slate-300"><strong>EHI (Economic Health Index):</strong> (1-poverty)×0.4 + (1-uninsured)×0.3 + income_percentile×0.3</li>
-                            <li class="text-slate-300"><strong>MSR (Market Saturation Ratio):</strong> Population / (existing_stores × 5000) - identifies undersaturated markets</li>
-                            <li class="text-slate-300"><strong>CNS (Community Need Score):</strong> obesity×0.35 + diabetes×0.35 + poverty×0.2 + distance×0.1</li>
-                            <li class="text-slate-300"><strong>AGI (Access Gap Index):</strong> (low_access_population + no_vehicle_households) / population</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-amber-400 mb-4">🎯 Results & Impact</h4>
-                        <ul class="space-y-2">
-                            <li class="text-slate-300">✓ Identified 20 optimal grocery store locations in California</li>
-                            <li class="text-slate-300">✓ <strong>Dual-objective balanced approach:</strong> 50% business profitability + 50% community health impact</li>
-                            <li class="text-slate-300">✓ <strong>Top 5 locations</strong> all located in food deserts: Fresno County (4), Kern County (3), Tulare County (3)</li>
-                            <li class="text-slate-300">✓ Framework replicable for other retail/service location optimization</li>
-                            <li class="text-slate-300">✓ Model shows no overfitting (train-test gap < 0.05)</li>
-                        </ul>
+
+                <!-- Project Details -->
+                <div class="project-details mt-6 pt-6 border-t border-slate-700">
+                    <div class="space-y-6">
+                        <!-- 3-Stage Pipeline -->
+                        <div>
+                            <h4 class="text-xl font-bold text-amber-400 mb-4">📊 3-Stage Analysis Pipeline</h4>
+                            <div class="space-y-3 text-slate-300">
+                                <p><span class="font-semibold">Stage 1 - Data Cleaning:</span> Integrated 5 datasets from USDA, CDC PLACES, Census Bureau with standardized census tract IDs</p>
+                                <p><span class="font-semibold">Stage 2 - Feature Engineering:</span> Created 4 composite indices (EHI, MSR, CNS, AGI) capturing economic, market, and health dimensions</p>
+                                <p><span class="font-semibold">Stage 3 - ML Modeling:</span> Random Forest for business success (R²=0.78) + Gradient Boosting for health impact (R²=0.86)</p>
+                            </div>
+                        </div>
+
+                        <!-- 4 Composite Indices -->
+                        <div>
+                            <h4 class="text-xl font-bold text-amber-400 mb-4">📋 4 Composite Indices</h4>
+                            <div class="space-y-3 text-slate-300 text-sm">
+                                <p><span class="font-semibold">EHI (Economic Health Index):</span> (1-poverty)×0.4 + (1-uninsured)×0.3 + income_percentile×0.3</p>
+                                <p><span class="font-semibold">MSR (Market Saturation Ratio):</span> Population / (existing_stores × 5000) - identifies undersaturated markets</p>
+                                <p><span class="font-semibold">CNS (Community Need Score):</span> obesity×0.35 + diabetes×0.35 + poverty×0.2 + distance×0.1</p>
+                                <p><span class="font-semibold">AGI (Access Gap Index):</span> (low_access_population + no_vehicle_households) / population</p>
+                            </div>
+                        </div>
+
+                        <!-- Key Findings -->
+                        <div>
+                            <h4 class="text-xl font-bold text-amber-400 mb-4">🎯 Key Findings</h4>
+                            <div class="space-y-2 text-slate-300 text-sm">
+                                <div class="flex items-start gap-3">
+                                    <span class="text-amber-400 font-bold">•</span>
+                                    <span><span class="font-semibold">Income Dominance:</span> 61.6% of prediction power comes from income characteristics - economic factors are the primary driver of store success</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-amber-400 font-bold">•</span>
+                                    <span><span class="font-semibold">Bay Area Concentration:</span> 15 of top 20 locations in San Francisco Bay Area (San Mateo County 55%, Santa Clara County 20%)</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-amber-400 font-bold">•</span>
+                                    <span><span class="font-semibold">Top 5 Recommendations:</span> #1 San Francisco ($250K+), #2 Santa Clara ($250K+), #3 Tulare ($88.8K), #4-5 San Mateo ($250K+) - all high-income urban areas</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-amber-400 font-bold">•</span>
+                                    <span><span class="font-semibold">Food Desert Reality:</span> 0 of top 20 locations are in food deserts (100% NOT food deserts). Current 60/40 weighting prioritizes business viability over critical social need</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-amber-400 font-bold">•</span>
+                                    <span><span class="font-semibold">Social Impact Opportunity:</span> Tulare County (Rank #3) shows lower-income areas can rank high due to: high population (19,732), significant health needs (37.6% obesity), and urban density</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Model Performance -->
+                        <div>
+                            <h4 class="text-xl font-bold text-amber-400 mb-4">📈 Model Performance</h4>
+                            <div class="space-y-2 text-slate-300 text-sm">
+                                <p><span class="font-semibold">Selected Model:</span> Random Forest (best balance of accuracy and interpretability)</p>
+                                <p><span class="font-semibold">Business Success R²:</span> 0.778 | <span class="font-semibold">Health Impact R²:</span> 0.860</p>
+                                <p><span class="font-semibold">Overfitting Gap:</span> 0.061 (acceptable &lt; 0.10) - model generalizes well to unseen data</p>
+                                <p><span class="font-semibold">Top Predictors:</span> Low-income status (46.7%), County median income (14.9%), Food access (12.7%), Housing density (9.9%)</p>
+                            </div>
+                        </div>
+
+                        <!-- Policy Implications -->
+                        <div class="p-4 rounded-lg bg-slate-900/50 border border-amber-400/20">
+                            <h4 class="text-lg font-bold text-amber-400 mb-3">💡 Policy Implications</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                The analysis reveals a fundamental trade-off between business profitability and social impact. Economic viability concentrates in high-income Bay Area markets, while critical food desert areas lack commercial incentive. Policymakers seeking to address food deserts may need separate subsidy or incentive models rather than pure market-based site selection.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
